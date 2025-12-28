@@ -1,0 +1,291 @@
+:root{
+    /* ========================================================================================== */
+    /*                                                  COLORS / TEXTS / ACCENTS / ICONS / DIVERS */
+    /* ========================================================================================== */
+
+    /* COLORS */
+    --color-background:#1b1c1f;
+    --color-body: #282d35;
+
+    /* TEXTS */
+    --color-title-primary: #fafcfe;
+    --color-description-text:#6a6f79;
+
+    /* ACCENTS */
+    --color-accent: #df7625;
+
+    /* FOCUS */
+    --background-focus: #fafcfe;
+    --text-focus: #1b1c1f;
+
+
+/* ========================================================================================== */
+/*                                                                                      FONTS */
+/* ========================================================================================== */
+
+/* FONT FAMILY */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+
+/* FONT SIZE */
+    --font-size-medium: 1.25rem;
+    --font-size-regular: 1rem;
+    --font-size-small: 0.9rem;
+    --font-size-xsmall:0.7rem;
+
+/* FONT WEIGHT */
+    --font-weight-bold: 700;
+    --font-weight-semibold:600;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-xlight:200;
+
+
+/* ========================================================================================== */
+/*                                                                              BORDER RADIUS */
+/* ========================================================================================== */
+
+    /* BORDER RADIUS */
+    --border-radius-card: 24px;
+    --border-radius-icon: 50%;
+    --border-radius-cta: 16px;
+    --border-radius-pills: 16px;
+}
+
+
+/* ========================================================================================== */
+/*                                                                                  BODY PAGE */
+/* ========================================================================================== */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+
+
+/* ========================================================================================== */
+/*                                                                         Section Background */
+/* ========================================================================================== */
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1b1c1f;
+}
+
+/* ========================================================================================== */
+/*                                                                                Rating Card */
+/* ========================================================================================== */
+.card__wrapper{
+    max-width: 400px;
+    height: auto;
+}
+
+.card__rating{
+    max-width: 400px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    padding: 32px;
+
+    background-color: var(--color-body);
+    border-radius: var(--border-radius-card);
+}
+.card__rating.is-hidden{
+    display: none;
+}
+.card__icon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: var(--border-radius-icon);
+
+    background-color: var(--color-description-text);
+    color: var(--color-accent);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card__interogation{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold) ;
+
+    letter-spacing: 0.06em;
+
+    color: var(--color-title-primary);
+}
+.card__description{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-light) ;
+
+    letter-spacing: 0.06em;
+
+    color: var(--color-description-text);
+    max-width: 85%;
+}
+.card__ranking{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    margin: 16px;
+
+}
+.number{
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-icon);
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-description-text);
+    color: var(--color-title-primary);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-regular);
+
+    cursor: pointer;
+}
+
+.cta__submit{
+    background-color: var(--color-accent);
+    color: var(--color-background);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-regular);
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    border: none;
+    border-radius: var(--border-radius-cta);
+    padding: 4px;
+
+    cursor: pointer;
+}
+
+.cta__submit:focus{
+    background-color: var(--background-focus);
+}
+
+.number.is-selected,
+.number:hover,
+.number:focus-visible{
+    background-color: var(--background-focus);
+    color: var(--text-focus);
+}
+
+
+/* ========================================================================================== */
+/*                                                                               Success Card */
+/* ========================================================================================== */
+.card__thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    padding: 32px;
+
+    max-width: 400px;
+    height: 350px;
+
+    background-color: var(--color-body);
+    border-radius: var(--border-radius-card);
+
+}
+
+.card__thanks.is-hidden{
+    display: none;
+}
+
+.thanks__illustration{
+    max-width: 200px;
+    height: 170px;
+
+    margin: 0;
+    overflow: hidden;
+
+}
+.thanks__img{
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+}
+
+.thanks__pills{
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-pills);
+
+    padding: 4px 32px;
+
+    color: var(--color-accent);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+
+}
+
+.thanks__msg{
+    color: var(--color-title-primary);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+
+    letter-spacing: 0.06em;
+}
+
+.thanks__txt{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-light) ;
+
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    color: var(--color-description-text);
+
+}
+
+/* ========================================================================================== */
+/*                                                                                 Responsive */
+/* ========================================================================================== */
+
+@media (max-width:480px){
+    .background{
+        padding: 16px;
+    }
+
+}

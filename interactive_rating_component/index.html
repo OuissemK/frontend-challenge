@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive rating component</title>
+
+<!-- Meta description SEO -->
+    <meta name="description" content="Frontend practice project featuring an interactive rating component. Built with HTML, CSS and JavaScript, focusing on UI states, user interaction and responsive design.">
+<!-- Meta theme-color -->
+    <meta name="theme-color" content="">
+
+<!-- Liens Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Liens CSS -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<!-- SECTION BACKGROUND -->
+    <section class="background">
+<!-- Card Submit -->
+        <div class="card__wrapper">
+            <div class="card__rating" id="ratingCard">
+
+                <div class="card__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.5l2.9 6 6.6.6-5 4.3 1.5 6.5L12 16.8 6 19.9l1.5-6.5-5-4.3 6.6-.6L12 2.5z"/>
+                    </svg>
+                </div>
+
+                <h2 class="card__interogation">How did we do?</h2>
+                <p class="card__description">Please let us know how we did with your support request. All feedback is appreciated to improve our offering!</p>
+
+<!-- Numbers -->
+                <div class="card__ranking" id="ratingButtons">
+                    <button type="button" class="number">1</button>
+                    <button type="button" class="number">2</button>
+                    <button type="button" class="number">3</button>
+                    <button type="button" class="number">4</button>
+                    <button type="button" class="number">5</button>
+                </div>
+
+<!-- CTA submit -->
+                <button class="cta__submit" id="submitBtn" type="button">Submit</button>
+            </div>
+
+<!-- Card Greetings -->
+                <div class="card__thanks is-hidden" id="thanksCard">
+                    <figure class="thanks__illustration">
+                        <img class="thanks__img" src="/interactive_rating_component/image/success.svg" alt="">
+                    </figure>
+
+                    <div class="thanks__pills" id="selectedText">You selected 4 out of 5</div>
+                    <h2 class="thanks__msg">Thank you!</h2>
+                    <p class="thanks__txt">We appreciate you taking the time to give a rating.<br>If you ever need more support,don't hesitate to get in touch!</p>
+                </div>
+        </div>
+    </section>
+<!-- Script JS -->
+    <script src="/interactive_rating_component/index.js"></script>
+</body>
+</html>

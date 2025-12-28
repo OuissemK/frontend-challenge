@@ -1,0 +1,251 @@
+:root{
+
+    /* ========================================================================================== */
+    /*                                                  COLORS / TEXTS / ACCENTS / ICONS / DIVERS */
+    /* ========================================================================================== */
+
+    /* COLORS */
+    --color-background:#0D1020;
+    --color-body: #211F3A;
+    --color-overlay: #9257cc;
+
+    /* TEXTS */
+    --color-title-primary: #fdfefe;
+    --color-description-text:#9F9EB2;
+
+    /* ACCENTS */
+    --color-title-accent: #9762D3;
+
+
+/* ========================================================================================== */
+/*                                                                                      FONTS */
+/* ========================================================================================== */
+
+/* FONT FAMILY */
+    --font-primary: "Lexend deca", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+
+/* FONT SIZE */
+    --font-size-medium: 1.25rem;
+    --font-size-regular: 1rem;
+    --font-size-small: 0.9rem;
+    --font-size-xsmall:0.7rem;
+
+/* FONT WEIGHT */
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+
+
+/* ========================================================================================== */
+/*                                                                              BORDER RADIUS */
+/* ========================================================================================== */
+
+    /* BORDER RADIUS */
+    --border-radius-card: 8px;
+}
+
+/* ========================================================================================== */
+/*                                                                                  BODY PAGE */
+/* ========================================================================================== */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    grid-template-areas: "card__infos card__media";
+
+    max-width: 1140px;
+    height: auto;
+
+    overflow: hidden;
+    border-radius: var(--border-radius-card);
+
+}
+
+.card__infos{
+    grid-area: card__infos;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-inline: 40px;
+    gap: 24px;
+
+    background-color: #211F3A;
+}
+
+.infos__title{
+    font-family: var(--font-primary) ;
+    font-size: var(--font-size-medium) ;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.15em;
+
+    max-width: 70%;
+
+    color: var(--color-title-primary);
+}
+.infos__title span{
+    color: var(--color-title-accent);
+}
+
+.infos__text{
+    font-family: var(--font-secondary) ;
+    font-size: var(--font-size-xsmall) ;
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.15em;
+
+    max-width: 70%;
+
+    color: var(--color-description-text);
+}
+
+
+/* Grid de la partie Stats */
+.infos__stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    grid-template-areas: "stats__companies stats__templates stats__queries";
+
+}
+/* Pas obligatoire tant que je n’ai pas besoin de réorganiser les éléments via grid-template-areas ( tant que l'ordre dans grid template area ne change pas ) */
+.stats__companies{
+    grid-area: stats__companies;
+}
+.stats__templates{
+    grid-area: stats__templates;
+}
+.stats__queries{
+    grid-area: stats__queries;
+}
+
+/* Stats Chiffres */
+.stats__companies strong,
+.stats__templates strong,
+.stats__queries strong{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0em;
+
+    color: var(--color-title-primary);
+}
+
+/* Labels */
+.stats__companies,
+.stats__templates,
+.stats__queries{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.15em;
+
+    color: var(--color-description-text);
+
+    padding-block: 16px;
+}
+
+.card__media{
+    grid-area: card__media;
+
+    margin: 0;
+    max-width: 100%;
+    height: 400px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.card__img{
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+}
+/* ⚠️ Ne pas oublier de mettre l'overlay dans la balise du parent */
+.overlay__img{
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-overlay);
+    opacity: 0.75;
+}
+
+/* ========================================================================================== */
+/*                                                                                 Responsive */
+/* ========================================================================================== */
+@media(max-width: 1140px){
+
+/* Partie grid mobile */
+.background{
+    min-height: 100svh;
+    padding: 16px;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    grid-template-areas:
+    "card__media"
+    "card__infos";
+
+    max-width: 350px;
+    height: auto;
+}
+
+/* Ajustement de la partie Infos de la Carte */
+.card__infos{
+    padding: 32px 0px;
+    align-items: center;
+
+    text-align: center;
+}
+
+.card__media{
+    height: auto;
+}
+
+/* Mise en colonne de la Partie Stats  */
+.infos__stats{
+    display: flex;
+    flex-direction: column;
+}
+}

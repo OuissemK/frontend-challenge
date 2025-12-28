@@ -1,0 +1,250 @@
+:root{
+
+    /* ========================================================================================== */
+    /*                                                       COULEURS / TEXTES / ACCENTS / DIVERS */
+    /* ========================================================================================== */
+
+/* Couleurs */
+    --color-body: #0D192B;
+    --color-card-body: #14253D;
+    --color-card: #2F415B;
+
+/* Textes */
+    --color-title: #FAFAFA;
+    --color-text-secondary: #8DACD9;
+    --color-labels: #6B7FA3;
+
+/* Accents */
+    --principal-accent: #00FFF8;
+    --secondary-accent: #00D9D4;
+
+/* Icon */
+    --icon-color:#FAFAFA;
+
+/* Divers */
+    --border-soft: rgba(255, 255, 255, 0.1);
+    --shadow-soft: rgba(0, 0, 0, 0.25);
+
+
+
+    /* ========================================================================================== */
+    /*                                                                               TYPOGRAPHIES */
+    /* ========================================================================================== */
+
+/* Font Family */
+    --font-primary: "Outfit", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+
+/* Font Size */
+    --font-size-medium: 1.5rem;
+    --font-size-regular: 1rem;
+    --font-size-small: .75rem;
+
+/* Font weight */
+
+    --font-weight-semibold: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+
+
+    /* ========================================================================================== */
+    /*                                                                                     Radius */
+    /* ========================================================================================== */
+
+    --border-radius-regular: 16px;
+    --border-radius-avatar: 50%;
+
+/* Divider */
+    --divider: #8DACD9;
+}
+
+
+/* ========================================================================================== */
+/*                                                                               Styling Page */
+/* ========================================================================================== */
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+box-sizing: border-box;
+}
+
+/* SECTION */
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--color-body);
+}
+
+/* FOND DE CARTE */
+.card-background{
+    background-color: var(--color-card-body);
+    border-radius: var(--border-radius-regular);
+}
+
+/* CARTE */
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    height: auto;
+
+    background-color: var(--color-card-body);
+    border-radius: var(--border-radius-regular);
+
+    padding: 16px;
+
+    box-shadow: 2px 2px 16px 0px rgba(250, 250, 250, 0.25);
+}
+
+/* Block Image */
+.card__media{
+    width: 100%;
+    height: 220px;
+    border-radius: var(--border-radius-regular);
+
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.card__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+
+    cursor: inherit;
+}
+.card__overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    pointer-events: none;
+    background-color: rgba(0, 255, 248, 0.5);
+}
+.card__media:hover .card__overlay{
+    opacity: 1;
+}
+
+.icon__eye{
+    color: var(--icon-color);
+}
+/* Block Descriptions */
+.card__details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.title__card{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.02em;
+
+    color: var(--color-title);
+
+    margin: 0;
+}
+.description__card{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-secondary);
+}
+
+/* Block des Meta */
+.card__meta{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-block: 16px;
+}
+.card__stats,
+.card__time{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.card__price{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.02em;
+
+    color: var(--principal-accent);
+}
+.card__time{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-secondary);
+}
+.icon__gem{
+    color: var(--principal-accent);
+}
+.icon__clock{
+    color: var(--color-text-secondary);
+}
+.icon__gem,
+.icon__clock{
+    margin: 0;
+    padding: 0;
+}
+
+/* Block Détails du Créateur */
+.card__creator{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    padding-block: 24px;
+    border-top: 0.5px solid var(--divider);
+}
+.avatar__creator{
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-avatar);
+}
+.card__creator-name{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-secondary);
+}
+.card__creator-name strong{
+    color: var(--color-title);
+    letter-spacing: 0.02em;
+}
+
+/* ========================================================================================== */
+/*                                                                             Hover Éléments */
+/* ========================================================================================== */
+
+.title__card:hover{
+    color: var(--principal-accent);
+    cursor: pointer;
+}
+.card__creator-name strong:hover{
+    color: var(--principal-accent);
+    cursor: pointer;
+}
