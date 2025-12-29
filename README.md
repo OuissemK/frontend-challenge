@@ -117,3 +117,17 @@ Ces projets font partie de mon parcours d’apprentissage afin de renforcer mes 
 ## 📌 Notes
 
 Chaque projet est autonome, placé dans son propre dossier et peut être ouvert directement dans un navigateur.
+
+## 🚀 Live Projects
+
+### 01 – NFT Preview Card Component
+🔗 https://ouissemk.github.io/frontend-challenge/nft_card/
+
+### 02 – Product Preview Card
+🔗 https://ouissemk.github.io/frontend-challenge/product_preview_card/
+
+### 03 – Stats Preview Card
+🔗 https://ouissemk.github.io/frontend-challenge/stats_preview_card/
+
+### 04 – Interactive Rating Component
+🔗 https://ouissemk.github.io/frontend-challenge/interactive_rating_component/
