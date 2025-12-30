@@ -32,6 +32,12 @@ These projects are part of my learning process to strengthen layout skills, UI s
 - Dynamic content update
 - Accessible buttons
 
+### 05 — FAQ Accordion
+- HTML & CSS
+- Native accordion using `<details>` / `<summary>`
+- Custom icons with pseudo-elements (`::after`)
+- Responsive design
+
 ---
 
 ## 🎯 Goals
@@ -94,6 +100,12 @@ Ces projets font partie de mon parcours d’apprentissage afin de renforcer mes 
 - Mise à jour dynamique du contenu
 - Boutons accessibles
 
+### 05 — Accordéon FAQ
+- HTML & CSS
+- Accordéon natif avec `<details>` / `<summary>`
+- Icônes personnalisées via pseudo-éléments (`::after`)
+- Design responsive
+
 ---
 
 ## 🎯 Objectifs
@@ -131,3 +143,6 @@ Chaque projet est autonome, placé dans son propre dossier et peut être ouvert 
 
 ### 04 – Interactive Rating Component
 🔗 https://ouissemk.github.io/frontend-challenge/interactive_rating_component/
+
+### 05 — FAQ Accordion
+🔗 https://ouissemk.github.io/frontend-challenge/faq_accordion/
