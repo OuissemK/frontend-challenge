@@ -1,0 +1,237 @@
+:root{
+/* ========================================================================================== */
+    /*                                                  COLORS / TEXTS / ACCENTS / ICONS / DIVERS */
+    /* ========================================================================================== */
+
+    /* COLORS */
+/* La partie section background */
+    --color-background-top:#2E1B37;
+    --color-background-bottom: #F6EDFE;
+
+/* La partie card background */
+    --color-body-card: #FFF;
+
+    /* TEXTS */
+    --color-title-primary: #2E1B37;
+    --color-description-text:#a29ba2;
+
+    /* ACCENTS */
+    --color-accent: #9432E2;
+    --color-accent-active: #2E1B37;
+
+
+/* ========================================================================================== */
+/*                                                                                      FONTS */
+/* ========================================================================================== */
+
+/* FONT FAMILY */
+    --font-primary: "Roboto", sans-serif;
+
+/* FONT SIZE */
+    --font-size-medium: 2rem;
+    --font-size-regular: 1rem;
+    --font-size-small: 0.9rem;
+
+/* FONT WEIGHT */
+    --font-weight-semibold:600;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+
+/* ========================================================================================== */
+/*                                                                              BORDER RADIUS */
+/* ========================================================================================== */
+
+    /* BORDER RADIUS */
+    --border-radius-card: 24px;
+    --border-radius-icon: 50%;
+}
+
+
+/* ========================================================================================== */
+/*                                                                                       BODY */
+/* ========================================================================================== */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p,h1,h2{
+    margin: 0;
+    padding: 0;
+}
+button{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+
+/* ========================================================================================== */
+/*                                                                                 BACKGROUND */
+/* ========================================================================================== */
+
+.background{
+    width: 100%;
+    min-height: 100vh;
+    background:
+/*! Ajout d'effet de Waves en SVG sans mettre de l'absolute mais intégérer directement dans le background */
+    url("./image/wave.svg") center calc(10% - 40px)/ 100% auto no-repeat,
+
+/*! Slipt sur le backgroudn afin de mettre 2 couleurs sans créer 2 div */
+    linear-gradient(
+    to bottom,
+    #2E1B37 0%,
+    #2E1B37 30%,
+    #F6EDFE 30%,
+    #F6EDFE 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+/* ========================================================================================== */
+/*                                                                                     CARD */
+/* ========================================================================================== */
+
+.card{
+    background: var(--color-body-card);
+    max-width: 600px;
+    min-height: 320px;
+    padding: 40px;
+
+    border-radius: var(--border-radius-card);
+
+    transform: translateY(-80px);
+}
+.title__card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 16px;
+}
+.card__title{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semibold);
+}
+
+.card__svg{
+    width: 20px;
+    height: 20px;
+}
+
+/* ========================================================================================== */
+/*                                                                                ACCORDION */
+/* ========================================================================================== */
+
+
+/* Details */
+.faq__accordion{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+
+    color: var(--color-description-text);
+
+    padding: 16px ;
+}
+
+/* :open est pour l'etat actif  */
+.faq__accordion:open{
+    content: "-";
+    border-radius: 50%;
+}
+
+/* Summary */
+.faq__item{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+
+    color: var(--color-title-primary);
+    padding: 8px 0;
+
+
+
+    cursor: pointer;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+}
+
+/*! La propritété ::after n'est pas pour un état avant et après mais pour l'emplacement de l'icon */
+.faq__item::after{
+    content: "+";
+    background: var(--color-accent);
+    color: #FFF;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+/* ! ici j ai utilisé un autre procédé avec un display grid + place items center pour centrer le content "icon" afin d'éviter ↙️ */
+/*
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+
+/* C'est l'équivalent de la procédure classique ⬆️ */
+    display: grid;
+    place-items: center;
+    flex: 0 0 20px;
+}
+.faq__accordion[open] > .faq__item::after{
+    content: "-";
+    background: var(--color-accent-active);
+}
+.faq__accordion > p{
+    margin-top: 12px;
+    line-height: 1.6;
+    color: var(--color-description-text);
+}
+
+/* ========================================================================================== */
+/*                                                                               RESPONSIVE */
+/* ========================================================================================== */
+
+@media(max-width: 600px){
+    .card{
+        max-width: 300px;
+        height: auto;
+
+        padding: 24px;
+}
+
+.title__card{
+    gap: 8px;
+}
+
+    .card__title{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-semibold);
+}
+
+    .card__svg{
+    width: 16px;
+    height: 16px;
+}
+
+}
