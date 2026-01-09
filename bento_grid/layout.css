@@ -1,0 +1,66 @@
+/* ========================================================================================== */
+/*                                                                                     LAYOUT */
+/* ========================================================================================== */
+
+/* ========================= SECTION ========================= */
+.bento-layout{
+    max-width: 1200px;
+    width: 100%;
+
+    margin: 100px auto;
+    padding: 0 24px;
+}
+/* ========================= GRID BENTO ========================= */
+.bento-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  gap: 16px;
+
+  grid-template-areas:
+    "create social-media social-media schedule"
+    "create manage maintain schedule"
+    "write-content manage maintain schedule"
+    "write-content audience follower follower";
+}
+
+/* ========================= GRID AREA PLACEMENT ========================= */
+.card-create { grid-area: create; }
+.card-social-media { grid-area: social-media; }
+.card-schedule { grid-area: schedule; }
+.card-write-content { grid-area: write-content; }
+.card-manage { grid-area: manage; }
+.card-maintain { grid-area: maintain; }
+.card-audience { grid-area: audience; }
+.card-follower { grid-area: follower; }
+
+/* ========================= BORDER RADIUS CARD & TCHAT CARDS ========================= */
+.bento-grid > * {
+  border-radius: var(--border-radius-card);
+}
+
+.write__msg-answer,
+.write__msg-asking,
+.card-chat{
+    border-radius: var(--border-radius-card);
+}
+
+/* ========================= CARDS GROUP BY BG COLORS ========================= */
+.card-social-media,
+.card-follower{
+    background-color: var(--color-bg-card-2);
+}
+.card-write-content,
+.card-maintain{
+    background-color: var(--color-bg-card-4);
+}
+.card-create{
+    background-color: var(--color-bg-card-1);
+}
+.card-schedule{
+    background-color: var(--color-bg-card-3);
+}
+.card-audience,
+.card-manage{
+    background-color: var(--color--neutral-primary);
+}

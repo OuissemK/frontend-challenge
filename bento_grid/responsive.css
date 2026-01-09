@@ -1,0 +1,178 @@
+/* ========================================================================================== */
+/*                                                                                 Responsive */
+/* ========================================================================================== */
+@media (max-width: 480px) {
+
+/* ========================= Section ========================= */
+.bento-layout{
+    width: 100%;
+    height: auto;
+
+    margin: 40px auto;
+    padding: 0 16px;
+}
+/* ========================= Grid ========================= */
+.bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+
+    justify-items: center;
+
+    grid-template-areas:
+    "social-media"
+    "manage"
+    "maintain"
+    "schedule"
+    "follower"
+    "audience"
+    "create"
+    "write-content";
+}
+
+/* ========================= Sizing Cards ========================= */
+.card-create,
+.card-social-media,
+.card-schedule,
+.card-write-content,
+.card-manage,
+.card-audience,
+.card-follower,
+.card-maintain,
+.write__msg-answer,
+.write__msg-asking{
+    width: 100%;
+}
+/* ========================= Intern Card Tchat ========================= */
+.card-chat{
+    max-width: 220px;
+    width: 100%;
+}
+
+/* MIN-HEIGHT CARD */
+.card-social-media{min-height: 320px;}
+.card-audience{min-height: 300px;}
+.card-follower{min-height: 400px;}
+/* .card-manage{height: auto;} */
+.card-maintain{min-height: 140px ;}
+
+/* ========================= Titles ========================= */
+/* Suppression des <Br> uniquement pour le repsonsive */
+.create__title br,
+.write__title br,
+.social__media-title br{
+    display: none;
+}
+/* Title Bases */
+.create__title,
+.write__title,
+.follower__title,
+.social__title,
+.maintain__title,
+.schedule__title{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-regular-2);
+    font-weight: var(--font-weight-poppins-semibold);
+
+    text-wrap: balance;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    width: 100%;
+}
+
+/* ========================= Card Social Media ========================= */
+/* Social media*/
+.social__media-info{
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-light);
+}
+.social__media-title{
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-poppins-medium);
+}
+
+/* ========================= Manage ========================= */
+.social__wrapper{
+    cursor: default;
+    overflow: hidden;
+}
+.social__title,
+.maintain__title,
+.schedule__title{
+    padding: 16px 0 ;
+}
+
+/* ========================= Create ========================= */
+.create__btn{
+    width: fit-content;
+    gap: 8px;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-medium);
+}
+
+/* ========================= Maintain ========================= */
+/* Card Maintain  */
+.maintain__dashboard{
+    min-height: 140px;
+    border-radius: 16px 16px 0 0;
+}
+
+/* ========================= Write ========================= */
+/* Tchat message */
+.msg__asking-wrapper,
+.write__msg-asking{
+    font-size: var(--font-size-small);
+}
+
+/* ========================= Schedule ========================= */
+/* CARD SCHEDULE RESPONSIVE */
+.card-schedule{padding: 16px;}
+.schedule__card-graph{width: 100%;}
+
+.card__graph-title{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-medium);
+}
+.schedule__txt{
+    text-align: center;
+    padding:16px 48px;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-regular);
+}
+.graph__days,
+.schedule__graph{
+    overflow: hidden;
+    cursor:default;
+}
+
+/* ========================= Follower ========================= */
+.card-follower{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.follower__graph{
+    width: 100%;
+    margin: 0;
+}
+.follower__title{
+    padding: 16px ;
+    text-align: center;
+    text-wrap: balance;
+}
+.graph__wrapper{
+    position: absolute;
+    right: 24px;
+    bottom: 160px;
+}
+/* ========================= Audience ========================= */
+.audience__avatar{
+    justify-content: flex-start;
+}
+}

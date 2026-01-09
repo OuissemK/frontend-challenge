@@ -1,0 +1,122 @@
+:root{
+/* ========================================================================================== */
+/*                                                  COLORS / TEXTS / ACCENTS / ICONS / DIVERS */
+/* ========================================================================================== */
+
+/* ========================= COLORS ========================= */
+/* La partie section background */
+    --color-bg-card-1:#F6EDE1;
+    --color-bg-card-2:#6C52D7;
+    --color-bg-card-3:#F6EDFE;
+    --color-bg-card-4:#F2CB6E;
+    --color-bg-card-5:#fAFAFA;
+
+    --color-bg-pills:#FFFFFF;
+
+/* La partie card background */
+    --color-body-background: #F6EDFE;
+
+/* ========================= TEXTS ========================= */
+/* Titles */
+    --color-title-primary:#1B1C1F;
+    --color-title-secondary:#FFFFFF;
+    --color-title-tertiary:#6C52D7;
+
+/* Description Texts */
+    --color-description-text-primary:#1B1C1F;
+    --color-description-text-secondary:#FFFFFF;
+    --color-description-labels:#6A6F79;
+
+/* ========================= TEXTS ACCENTS========================= */
+/* Titles Accent */
+    --color-title-accent-1:#6C52D7;
+    --color-title-accent-2:#F2CB6E;
+
+/* ACCENTS Texts */
+    --color-accent-active-text: #68936A;
+    --color-accent-active-background:#E2FFE9;
+
+    --color-accent-primary: #B25B75;
+    --color-accent-primary-background:#F6E5E8;
+
+    --color-accent: #6C52D7;
+
+/* ========================= NEUTRAL ========================= */
+/* Color Neutral */
+    --color--neutral-primary: #FAFAFA;
+    --color--neutral-secondary: #1B1C1F;
+
+
+/* ========================================================================================== */
+/*                                                                                      FONTS */
+/* ========================================================================================== */
+
+/* ========================= FONT FAMILY ========================= */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+
+/* ========================= FONT SIZE ========================= */
+    --font-size-large: 3rem; /* 48px */
+
+    --font-size-medium-2: 2.5rem;/* 40px */
+    --font-size-medium: 2rem; /* 32px */
+
+    --font-size-regular-2: 1.125rem; /* 18px */
+    --font-size-regular: 1rem; /* 16px */
+
+    --font-size-small: 0.875rem; /* 14px */
+    --font-size-xsmall: 0.750rem; /* 12px */
+
+/* ========================= FONT WEIGHT ========================= */
+        /* Poppins */
+    --font-weight-poppins-semibold:600;
+    --font-weight-poppins-medium: 500;
+
+        /* Roboto */
+    --font-weight-roboto-medium: 500;
+    --font-weight-roboto-regular: 400;
+    --font-weight-roboto-light: 300;
+
+/* ========================================================================================== */
+/*                                                                              BORDER RADIUS */
+/* ========================================================================================== */
+
+/* ========================= BORDER RADIUS ========================= */
+    --border-radius-card: 16px;
+    --border-radius-pills: 24px;
+    --border-radius-icon: 50%;
+}
+
+/* ========================================================================================== */
+/*                                                                                       BODY */
+/* ========================================================================================== */
+body{
+    margin: 0;
+    padding: 0;
+
+    background-color: #FFFFFF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p,h1,h2{
+    margin: 0;
+}
+
+h1,h2{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium) ;
+    font-weight: var(--font-weight-poppins-semibold);
+
+    line-height: 1.1;
+}
+
+p{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall) ;
+    font-weight: var(--font-weight-roboto-regular);
+
+    line-height: 1.1;
+}

@@ -1,0 +1,723 @@
+/* ========================================================================================== */
+/*                                                                  Carte create and schedule */
+/* ========================================================================================== */
+
+/* Carte Create and schedule TITLE */
+.card-create{
+    padding: 60px 24px ;
+    gap: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.create__title em{
+    color: var(--color-accent);
+}
+
+/* Button CTA */
+.create__btn{
+    border: none;
+    border-radius: var(--border-radius-pills);
+    gap: 8px;
+    padding: 16px 48px;
+
+    background-color: var(--color-bg-card-4);
+    color: var(--color-title-accent-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-medium);
+
+    cursor: pointer;
+}
+.create__icon{
+    width: 16px;
+    height: 16px;
+}
+
+/* ========================================================================================== */
+/*                                                                         Carte Social media */
+/* ========================================================================================== */
+.card-social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Titre de la carte Social Media */
+.social__media-title{
+    margin: 16px;
+    text-align: center;
+}
+
+/* EM Titre partie Accent */
+.social__media-title color{
+    color: var(--color-title-accent-2);
+}
+
+/* Stars Social Media */
+.social__media-star{
+    margin-bottom: 8px;
+}
+
+.social__media-info{
+    font-weight: var(--font-weight-roboto-light);
+    letter-spacing: 0.06rem;
+}
+
+.social__media-info,
+.social__media-title{
+    color: var(--color-title-secondary);
+}
+
+/* ========================================================================================== */
+/*                                                                   Carte write your content */
+/* ========================================================================================== */
+.card-write-content{
+    padding: 16px 24px;
+    gap: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================================================================== */
+/*                                                         Carte Tchat ( Write your content ) */
+/* ========================================================================================== */
+
+.card-chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-bg-card-5);
+
+    max-width: 220px;
+    min-height: 200px;
+    gap: 16px;
+}
+
+.chat__first-wrapper{
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+    padding-inline: 16px;
+}
+
+.write__msg-asking{
+    background-color: var(--color-accent-primary-background);
+
+    padding: 8px 12px;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-light);
+    text-align: right;
+}
+
+.msg__asking-wrapper{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+
+    border-radius: var(--border-radius-icon);
+
+    background-color: var(--color-bg-card-3);
+
+    display: grid;
+    place-items: center;
+    flex: 0 0 40px;
+}
+
+.msg__asking-avatar{
+    width: 40px;
+    height: 40px;
+
+    object-fit: cover;
+    padding-top: 8px;
+}
+
+/* ========================================================================================== */
+/*                                                        Carte answer ( Write your content ) */
+/* ========================================================================================== */
+.chat__second-wrapper{
+    display: flex;
+
+    gap: 4px;
+    padding: 0 16px;
+}
+
+.chat__icon{
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+
+    display: grid;
+    place-items: center;
+    flex: 0 0 30px;
+
+    background-color: var(--color-bg-card-3);
+    border-radius: var(--border-radius-icon);
+}
+
+.write__msg-answer{
+    background-color: var(--color-bg-card-1);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-light);
+
+    padding: 8px 12px;
+}
+
+/* ========================================================================================== */
+/*                                                                             Carte Audience */
+/* ========================================================================================== */
+.card-audience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 16px;
+}
+
+.audience__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 24px;
+}
+
+.chevron-right{
+    margin: 0;
+    padding: 0;
+}
+
+.audience__title{
+    display: flex;
+    align-items: center;
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium-2);
+    font-weight: var(--font-weight-poppins-semibold);
+}
+
+.audience__info{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-regular);
+}
+
+.audience__avatar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 24px;
+}
+
+.avatar__background-1,
+.avatar__background-2,
+.avatar__background-3{
+    width: 72px;
+    height: 72px;
+
+    border-radius: var(--border-radius-icon);
+
+    display: grid;
+    place-items: center;
+    flex: 0 0 72px;
+}
+
+/* Avatar Backgrounds */
+.avatar__background-1{
+    background-color: var(--color-bg-card-3);
+}
+.avatar__background-2{
+    background-color: var(--color-bg-card-4);
+    z-index: 5;
+    transform: translateX(-12px);
+}
+.avatar__background-3{
+    background-color: var(--color-bg-card-3);
+    z-index: 10;
+    transform: translateX(-24px);
+}
+
+/* Avatar Profils */
+.avatar__profil{
+    width: 56px;
+    height: 56px;
+}
+
+/* ========================================================================================== */
+/*                                                                               Carte Manage */
+/* ========================================================================================== */
+.card-manage{
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 0px 16px 24px;
+}
+
+.social__wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    cursor: grab;
+}
+
+.social__wrapper::-webkit-scrollbar{ display:none; }
+
+.social__bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.social__instagram,
+.social__x{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-bg-pills);
+
+    padding: 4px 12px ;
+    flex: 0 0 auto;
+
+    border-radius: var(--border-radius-pills);
+}
+
+.bg__icon{
+    background-color: var(--color-bg-card-4);
+
+    border-radius: var(--border-radius-icon);
+    padding: 8px;
+
+    display: grid;
+    place-items: center;
+}
+
+.social__id{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-roboto-medium);
+}
+
+.social__x,
+.social__followers{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.social__label{
+    color: var(--color-description-labels);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-light);
+}
+
+.social__title{
+    padding: 24px 0;
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-poppins-semibold);
+
+    line-height: 1;
+}
+
+/* ========================================================================================== */
+/*                                                                             Carte Maintain */
+/* ========================================================================================== */
+
+.card-maintain{
+    padding: 24px 24px 0 24px;
+}
+
+.maintain__title{
+    margin-bottom: 8px;
+}
+
+.maintain__dashboard{
+/* Background split with linear color */
+    background: linear-gradient(
+        to bottom,
+        var(--color-bg-card-2) 0%,
+        var(--color-bg-card-2) 30%,
+        var(--color--neutral-primary) 30%,
+        var(--color--neutral-primary) 100%
+);
+
+    min-height: 100px;
+    border-radius: var(--border-radius-card);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.maintain__date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 4px;
+}
+
+.maintain__month{
+    color: var(--color--neutral-primary);
+
+    padding: 4px 8px ;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-light);
+}
+/* Grid for the checking tab */
+.maintain__checking {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 16px;
+grid-row-gap: 16px;
+}
+
+.checking__icon{
+    border-radius: var(--border-radius-icon);
+    background-color: var(--color-bg-card-2);
+
+    padding: 4px;
+}
+
+.month__checking{
+    background-color: var(--color--neutral-primary);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-height: 80px;
+}
+
+/* ========================================================================================== */
+/*                                                                        Card Grow Followers */
+/* ========================================================================================== */
+
+.card-follower{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 24px;
+}
+
+.follower__graph{
+    width: 400px;
+    height: 200px;
+
+    margin-right: 56px;
+    padding: 32px 16px;
+    border-radius: var(--border-radius-card);
+
+    background-color: var(--color--neutral-primary);
+}
+
+.follower__label{
+    color: var(--color-description-labels);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-regular);
+}
+
+.follower__stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 8px;
+}
+
+.follower__number{
+    color: var(--color-description-text-primary);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular-2);
+    font-weight: var(--font-weight-roboto-medium);
+}
+
+.follower__percent{
+    background-color: var(--color-accent-active-background);
+    color: var(--color-accent-active-text);
+
+    padding: 4px 8px;
+    border-radius: var(--border-radius-pills);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-regular);
+}
+
+.stats__graph{
+    display: flex;
+    align-items: flex-end;
+
+    min-height: 100px;
+    gap: 16px;
+}
+/* Graph Bars Height */
+.graph__bar-1{height: 40px;}
+.graph__bar-2{height: 50px;}
+.graph__bar-3{height: 60px;}
+.graph__bar-4{height: 80px;}
+.graph__bar-5{height: 75px;}
+
+.graph__bar-1,
+.graph__bar-2,
+.graph__bar-3,
+.graph__bar-4,
+.graph__bar-5{
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-pills);
+
+    width: 16px;
+}
+
+.follower__title{
+    color: var(--color-title-secondary);
+}
+
+.graph__wrapper{
+    background-color: var(--color--neutral-primary);
+    position: absolute;
+    bottom: 16px;
+    right: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px;
+    gap: 16px;
+
+    border-radius: 999px;
+}
+
+.graph__pills{
+    background-color: var(--color-bg-card-4);
+    border-radius: var(--border-radius-icon);
+
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+    flex: 0 0 48px;
+}
+
+.follower__stats{gap: 8px;}
+
+.follower__title{color: var(--color--neutral-primary);}
+
+.follower__title-pills{
+    color: var(--color-description-labels);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-roboto-regular);
+}
+
+.card-schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    padding: 0 0 0 24px;
+}
+.schedule__card-graph{
+    background-color: var(--color--neutral-primary);
+
+    padding: 16px;
+    width: 250px;
+    min-height: 300px;
+    border-radius: var(--border-radius-card);
+}
+.schedule__title{
+    padding-block: 40px;
+}
+.card__graph-title{
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-roboto-medium);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding: 8px;
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+}
+
+.graph__days{
+    display: flex;
+    justify-content: flex-start;
+    padding: 24px 16px;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    cursor: grab;
+}
+
+.days{
+    color: var(--color-description-labels);
+    background-color: transparent;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-roboto-regular);
+
+    padding: 8px;
+    border-radius: 999px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.days.is-active{
+    background-color: var(--color-accent-primary-background );
+    color: var(--color-accent-primary);
+
+    pointer-events: none;
+    cursor:default;
+}
+
+.ranking-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2px;
+}
+
+.day__ranking{
+    display: inline-flex;
+    align-items: center;
+
+
+    padding: 6px 12px;
+    width: fit-content;
+
+    background-color: var(--color-accent-active-background);
+    color: var(--color-accent-active-text);
+
+    border-radius: var(--border-radius-pills);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xsmall);
+    font-weight: var(--font-weight-roboto-regular);
+}
+
+.schedule__graph {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+
+    cursor: grab;
+}
+
+.schedule__graph-bar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: end;
+    margin-left: 24px;
+
+    column-gap: 16px;
+}
+
+.schedule__graph-bar > *{
+    justify-self: center;
+    width: 16px;
+}
+
+/* Graph Bars Heigth */
+.schedule__graph-bar-1{height: 40px;}
+.schedule__graph-bar-2{height: 50px;}
+.schedule__graph-bar-3{height: 85px;}
+.schedule__graph-bar-4{height: 60px;}
+.schedule__graph-bar-5{height: 50px;}
+.schedule__graph-bar-6{height: 80px;}
+.schedule__graph-bar-7{height: 30px;}
+
+.schedule__graph-bar-1,
+.schedule__graph-bar-2,
+.schedule__graph-bar-3,
+.schedule__graph-bar-4,
+.schedule__graph-bar-5,
+.schedule__graph-bar-6,
+.schedule__graph-bar-7{
+    background-color: var(--color-bg-card-2);
+    border-radius: var(--border-radius-pills);
+}
+
+.schedule__graph-info{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 16px;
+
+    margin-left: 24px;
+    color: var(--color-description-labels);
+
+    font-size: var(--font-size-xsmall);
+    text-align: center;
+}
+
+.schedule__graph-info,
+.schedule__txt{
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-roboto-regular);
+}
+.schedule__txt{
+    color: var(--color-description-text-primary);
+
+    font-size: var(--font-size-small);
+    line-height: 1.3;
+    text-align: left;
+
+    padding-block: 16px;
+    padding-right: 80px;
+}

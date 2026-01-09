@@ -38,6 +38,13 @@ These projects are part of my learning process to strengthen layout skills, UI s
 - Custom icons with pseudo-elements (`::after`)
 - Responsive design
 
+### 06 – Bento Grid Layout
+- Advanced CSS Grid layout
+- Modular bento-style UI
+- Design system with CSS tokens
+- Desktop & mobile responsive (mobile-only breakpoint)
+- Clean file structure (tokens / layout / components / responsive)
+
 ---
 
 ## 🎯 Goals
@@ -54,7 +61,7 @@ These projects are part of my learning process to strengthen layout skills, UI s
 
 - HTML5
 - CSS3 (Flexbox, Grid)
-- JavaScript (DOM manipulation)
+- JavaScript (DOM manipulation - selected projects)
 
 ---
 
@@ -106,6 +113,13 @@ Ces projets font partie de mon parcours d’apprentissage afin de renforcer mes 
 - Icônes personnalisées via pseudo-éléments (`::after`)
 - Design responsive
 
+### 06 – Bento Grid
+- Mise en page avancée en CSS Grid
+- Interface bento modulaire
+- Design system via CSS tokens
+- Responsive desktop & mobile (mobile uniquement)
+- Architecture CSS propre et scalable
+
 ---
 
 ## 🎯 Objectifs
@@ -122,7 +136,7 @@ Ces projets font partie de mon parcours d’apprentissage afin de renforcer mes 
 
 - HTML5
 - CSS3 (Flexbox, Grid)
-- JavaScript (manipulation du DOM)
+- JavaScript (manipulation du DOM - projets ciblés)
 
 ---
 
@@ -146,3 +160,6 @@ Chaque projet est autonome, placé dans son propre dossier et peut être ouvert 
 
 ### 05 — FAQ Accordion
 🔗 https://ouissemk.github.io/frontend-challenge/faq_accordion/
+
+### 05 — Bento Grid
+🔗 https://ouissemk.github.io/frontend-challenge/bento_grid/
