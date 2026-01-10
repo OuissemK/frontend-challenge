@@ -41,7 +41,7 @@
 
 .write__msg-answer,
 .write__msg-asking,
-.card-chat{
+.card-tchat{
     border-radius: var(--border-radius-card);
 }
 

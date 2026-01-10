@@ -43,12 +43,19 @@
 .write__msg-asking{
     width: 100%;
 }
-/* ========================= Intern Card Tchat ========================= */
-.card-chat{
-    max-width: 220px;
-    width: 100%;
+
+/* ========================= Card Create and Schedule ========================= */
+.card-create{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.create__title{
+    text-align: center;
+}
+
+/* ========================= Intern Card Tchat ========================= */
 /* MIN-HEIGHT CARD */
 .card-social-media{min-height: 320px;}
 .card-audience{min-height: 300px;}
@@ -63,6 +70,7 @@
 .social__media-title br{
     display: none;
 }
+
 /* Title Bases */
 .create__title,
 .write__title,
@@ -87,6 +95,7 @@
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-roboto-light);
 }
+
 .social__media-title{
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-poppins-medium);
@@ -97,6 +106,7 @@
     cursor: default;
     overflow: hidden;
 }
+
 .social__title,
 .maintain__title,
 .schedule__title{
@@ -120,6 +130,23 @@
 }
 
 /* ========================= Write ========================= */
+/* Title Card */
+.write__title{
+    max-width: 16ch;
+
+    text-align: left;
+    text-wrap: balance;
+}
+
+.card-tchat{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    max-width: 220px;
+    width: 100%;
+}
+
 /* Tchat message */
 .msg__asking-wrapper,
 .write__msg-asking{
@@ -136,6 +163,7 @@
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-roboto-medium);
 }
+
 .schedule__txt{
     text-align: center;
     padding:16px 48px;
@@ -144,6 +172,7 @@
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-roboto-regular);
 }
+
 .graph__days,
 .schedule__graph{
     overflow: hidden;
@@ -154,25 +183,26 @@
 .card-follower{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
+
 .follower__graph{
-    width: 100%;
     margin: 0;
 }
+
 .follower__title{
     padding: 16px ;
     text-align: center;
     text-wrap: balance;
 }
+
 .graph__wrapper{
     position: absolute;
-    right: 24px;
-    bottom: 160px;
+    right: 40px;
+    bottom: 130px;
+}
 }
 /* ========================= Audience ========================= */
-.audience__avatar{
-    justify-content: flex-start;
-}
-}
+
+

@@ -39,11 +39,19 @@ These projects are part of my learning process to strengthen layout skills, UI s
 - Responsive design
 
 ### 06 – Bento Grid Layout
+### 📱 Responsive behavior for Bento Grid Layout
 - Advanced CSS Grid layout
 - Modular bento-style UI
 - Design system with CSS tokens
-- Desktop & mobile responsive (mobile-only breakpoint)
+- Responsive: desktop + mobile (tablet not target)
 - Clean file structure (tokens / layout / components / responsive)
+
+- Desktop: fully designed
+- Mobile: optimized (tested on iPhone-sized screens)
+- Tablet: not specifically targeted for this challenge
+
+This project focuses on desktop and mobile layouts only, as defined by the challenge scope.
+
 
 ---
 
@@ -114,11 +122,19 @@ Ces projets font partie de mon parcours d’apprentissage afin de renforcer mes 
 - Design responsive
 
 ### 06 – Bento Grid
+### 📱 Responsive (Bento Grid)
 - Mise en page avancée en CSS Grid
 - Interface bento modulaire
 - Design system via CSS tokens
-- Responsive desktop & mobile (mobile uniquement)
+- Responsive : desktop + mobile (tablette non ciblée)
 - Architecture CSS propre et scalable
+
+- Desktop : design complet
+- Mobile : optimisé (tests sur écrans type iPhone)
+- Tablette : non ciblée volontairement
+
+Ce projet se concentre uniquement sur les versions desktop et mobile,
+conformément au périmètre du challenge.
 
 ---
 
